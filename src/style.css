@@ -10,27 +10,11 @@
 }
 
 .container {
+  width: 6vw;
   position: absolute;
-  max-width: 400px;
   height: auto;
   padding: 30px 0px;
   margin-top: 150px;
-}
-
-.title {
-  font-family: cursive;
-  transform: skew(30deg);
-  margin: auto;
-  width: 200px;
-  margin-bottom: 40px;
-  color: rgb(212, 201, 201);
-  animation: blink 1s linear infinite;
-}
-
-.bar {
-  width: 50%;
-  height: auto;
-  box-shadow: -10px 10px 10px rgb(190, 187, 187);
 }
 
 .logo {
@@ -39,13 +23,12 @@
   border: none;
   outline: none;
   transition: 0.5s linear;
-  width: 120%;
+  width: 100%;
 }
 
 .logo:hover {
   transition: 0.2s linear;
-  transform: scale(1.1);
-  width: 140%;
+  width: 120%;
   cursor: pointer;
 }
 
@@ -82,17 +65,32 @@
   background: #00aeff;
 }
 
-@keyframes blink {
-  from {
-    opacity: 0;
-  }
+.close,.open {
+  opacity: 0.2;
+  padding:10px;
+  cursor: pointer;
+  width: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+.open {
+  display: none;
+}
+
+
+@media only screen and (max-width: 1200px) {
   * {
     font-size: 1.2em;
   }
   .logo {
-    width: 70%;
+    width: 180%;
   }
+  .logo:hover {
+   width: 190%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+ .logo {
+   width: 280%;
+ }
 }
