@@ -1,0 +1,98 @@
+* {
+  font-size: 1.3em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: none;
+}
+
+.container {
+  position: absolute;
+  max-width: 400px;
+  height: auto;
+  padding: 30px 0px;
+  margin-top: 150px;
+}
+
+.title {
+  font-family: cursive;
+  transform: skew(30deg);
+  margin: auto;
+  width: 200px;
+  margin-bottom: 40px;
+  color: rgb(212, 201, 201);
+  animation: blink 1s linear infinite;
+}
+
+.bar {
+  width: 50%;
+  height: auto;
+  box-shadow: -10px 10px 10px rgb(190, 187, 187);
+}
+
+.logo {
+  text-align: center;
+  padding-top: 10px;
+  border: none;
+  outline: none;
+  transition: 0.5s linear;
+  width: 120%;
+}
+
+.logo:hover {
+  transition: 0.2s linear;
+  transform: scale(1.1);
+  width: 140%;
+  cursor: pointer;
+}
+
+.logo a,
+.logo a:visited,
+.logo a:active {
+  color: white;
+}
+
+.instagram {
+  background: radial-gradient(
+    circle at 30% 110%,
+    #ffdb8b 0%,
+    #ee653d 25%,
+    #d42e81 50%,
+    #a237b6 75%,
+    #3e5fbc 100%
+  );
+}
+
+.facebook {
+  background: linear-gradient(#16a8fd, #0a73af);
+}
+
+.linkedin {
+  background: #1c71d3;
+}
+
+.youtube {
+  background: red;
+}
+
+.twitter {
+  background: #00aeff;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 1.2em;
+  }
+  .logo {
+    width: 70%;
+  }
+}
